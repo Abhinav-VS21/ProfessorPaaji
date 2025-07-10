@@ -1,0 +1,443 @@
+[
+  {
+    "slide_id": 0,
+    "title": "",
+    "body": "OOAD – Module 2\u000b(PART 1)",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 1,
+    "title": "Concepts of Object Orientation",
+    "body": ": Object Modelling Technology, Basic Principles of Object Orientation: Abstraction Encapsulation, Polymorphism, Modularity, Hierarchy. UML Modelling Mechanisms. Structural Modelling: Classes and Interfaces, Attributes and Operations, Relationships: Association, Dependency, Generalization, Multiplicity, Aggregation, Interface, Types and Roles, Instances. UML Notation: Things, Relationships, Extensibility, Diagrams. UML Standard Elements: Stereotypes, Tagged Values, Constraints.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 2,
+    "title": "",
+    "body": "",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 3,
+    "title": "",
+    "body": "",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 4,
+    "title": "Object Modelling Technology",
+    "body": "\nThree analysis techniques that are used in conjunction with each other for object-oriented analysis are \nObject modelling\nDynamic modelling \nFunctional modelling\nThe process of object modelling can be visualized in the following steps −\nIdentify objects and group into classes\nIdentify the relationships among classes\nCreate user object model diagram\nDefine user object attributes\nDefine the operations that should be performed on the classes",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 5,
+    "title": "Dynamic Modeling ",
+    "body": "\n“A way of describing how an individual object responds to events, either internal events triggered by other objects, or external events triggered by the outside world”.\nThe process of dynamic modelling can be visualized in the following steps −\nIdentify states of each object\nIdentify events and analyze the applicability of actions\nConstruct dynamic model diagram, comprising of state transition diagrams\nExpress each state in terms of object attributes\nValidate the state–transition diagrams drawn",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 6,
+    "title": "Functional Modelling",
+    "body": "\nProcesses that are performed within an object and how the data changes as it moves between methods. \nIt specifies the meaning of the operations of object modelling and the actions of dynamic modelling. \nThe functional model corresponds to the data flow diagram of traditional structured analysis.\nThe process of functional modelling can be visualized in the following steps −\nIdentify all the inputs and outputs\nConstruct data flow diagrams showing functional dependencies\nState the purpose of each function\nIdentify constraints\nSpecify optimization criteria",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 7,
+    "title": "Concepts of Object OrientationBasic Principles of Object Orientation ",
+    "body": ":\nThe conceptual framework of object–oriented systems is based upon the object model. \nThere are two categories of elements in an object-oriented system: Major elements and minor elements.\nFive major elements\nAbstraction\nEncapsulation\nPolymorphism\nModularity\nHierarchy\nThree minor elements\nTyping\nConcurrency \nPersistence",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 8,
+    "title": "Abstraction",
+    "body": "\nGrady Booch, “An abstraction denotes the essential characteristics of an object that distinguish it from all other kinds of objects and thus provide crisply defined conceptual boundaries, relative to the perspective of the viewer.”\neg., Employee.\nAn abstraction isolates use from implementation: an abstraction can be used without knowledge of its implementation and implemented without knowledge of its use.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 9,
+    "title": "A way or mechanism to represent complex reality using simplified model",
+    "body": ".\nThe behavior of the data objects were completely characterized by the set of operations. Classical example is definition of stack cluster using only push and pop operations.\nDependency relationship that relates two elements or sets of elements (called client and supplier) representing the same concept but at different levels of abstraction or from different viewpoints.\nRealization is a specialized abstraction relationship between two sets of model elements, one representing a specification (the supplier) and the other represents an implementation of the latter (the client).",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 10,
+    "title": "Encapsulation",
+    "body": "\nEncapsulation is the process of binding both attributes and methods together within a class. \nInternal details of a class can be hidden from outside. \nThe class has methods that provide user interfaces by which the services provided by the class may be  used.\nEncapsulation is a development technique which includes creating new data types (classes) by combining both information (structure) and behaviors, and restricting access to implementation details.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 11,
+    "title": "",
+    "body": "Object is defined as an entity with a well defined boundary and identity that encapsulates state (attributes and relationships) and behavior (operations, methods, and state machines).\nElements in peer packages are encapsulated and are not a priori visible to each other.\nComponent represents a modular part of a system that encapsulates its contents and whose manifestation is replaceable within its environment.\nComponent is encapsulated and as a result, Components and subsystems can be flexibly reused and replaced by connecting (\"wiring\") them together.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 12,
+    "title": "Polymorphism ",
+    "body": "\nImplies using operations in different ways, depending upon the instance they are operating upon. \nAbility to apply different meaning (semantics, implementation) to the same symbol (message, operation) in different contexts.\nAllows objects with different internal structures to have a common external interface. \nParticularly effective while implementing inheritance.\nExample : Circle and rectangle.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 13,
+    "title": "",
+    "body": "When context is defined at compile time, it is called static or compile-time polymorphism.  \nEg. Overloading, Parametric polymorphism : templates.\nWhen context is defined during program execution, it is dynamic or run-time polymorphism. \nEg. Dynamic binding or late binding\nOperations are specified in the model and can be dynamically selected only through polymorphism.",
+    "notes": "Defines multiple methods with the same name but different parameters - a class where the \"+\" operator is defined to handle different data types, adding numbers when given numeric operands and joining strings when given string operands",
+    "has_image": false
+  },
+  {
+    "slide_id": 14,
+    "title": "Modularity",
+    "body": "\nProcess of decomposing a problem (program) into a set of modules so as to reduce the overall complexity of the problem. \nBooch has defined modularity: “Modularity is the property of a system that has been decomposed into a set of cohesive and loosely coupled modules.”\nModularity is intrinsically linked with encapsulation. \nModularity can be visualized as a way of mapping encapsulated abstractions into real, physical modules having high cohesion within the modules and their inter–module interaction or coupling is low.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 15,
+    "title": "Hierarchy",
+    "body": "\nBooch, “Hierarchy is the ranking or ordering of abstraction”. \nSystem can be made up of interrelated subsystems, which can have their own subsystems and so on until the smallest level components are reached. \nIt uses the principle of “divide and conquer”. Hierarchy allows code reusability.\nTwo types of hierarchies\n“IS–A” hierarchy − hierarchical relationship in inheritance, example, if we derive a class Journal, Magazine and Study material from a class Book, we can say that a OOAD  “is–a” Book.\n“PART–OF” hierarchy − hierarchical relationship in aggregation by which a class may be composed of other classes. For example, a Book is composed of author name, publisher, edition, No, of copies. It can be said that a publisher is a “part–of” Book.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 16,
+    "title": "Typing",
+    "body": "\nEnforcement of the notion that an object is an instance of a single class or type.\nA variable is associated with a datatype. It defines how an object should behave.\nEnforces that objects of different types may not be generally interchanged; and can be interchanged only in a very restricted manner if absolutely required to do so.\nStrong Typing − Operation on an object is checked at the time of compilation.\nWeak Typing − Messages may be sent to any class. \nOperation is checked only at the time of execution.",
+    "notes": "the language enforces that only compatible data types can be used in operations, preventing errors by catching type mismatches during compilation or runtime, essentially ensuring type safety throughout the program",
+    "has_image": false
+  },
+  {
+    "slide_id": 17,
+    "title": "Concurrency",
+    "body": "\nTwo types: active and inactive objects. \nActive objects have independent threads of control that can execute concurrently with threads of other objects. \nActive objects synchronize with one another as well as with purely sequential objects.\n\nPersistence\nAn object occupies a memory space and exists for a particular period of time. \nLifespan of an object was typically the lifespan of the execution of the program that created it. \nObject lifespan is longer than the duration of the process creating the object. \nObject continues to exist even after its creator ends to exist.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 18,
+    "title": "",
+    "body": "",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 19,
+    "title": "Structural Modeling",
+    "body": ": Classes, Relationships, Common mechanism and  Diagrams\n1. Classes:\nA class is a description of a set of objects that share the same attributes, operations, relationships, and semantics. \nNames \nEvery class must have a name that distinguishes it from other classes.\nA name is a textual string. \nName alone is known as a simple name; a path name is the class name prefixed by the name of the package in which that class lives. \nA class may be drawn showing only its name",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 20,
+    "title": "Attributes ",
+    "body": "\nAn attribute is a named property of a class that describes a range of values that instances of the property may hold. \nA class may have any number of attributes or no attributes at all. \nAn attribute represents some property of the thing you are modeling that is shared by all objects of that class. \nFor example, every wall has a height, width, and thickness; you might model your customers in such a way that each has a name, address, phone number, and date of birth",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 21,
+    "title": "Operations ",
+    "body": "\nAn operation is the implementation of a service that can be requested from any object of the class to affect behavior. \nAn operation is an abstraction of something you can do to an object that is shared by all objects of that class. \nA class may have any number of operations or no operations at all. \nInvoking an operation on an object changes the object's data or state. \nSpecify an operation by stating its signature, which includes the name, type, and default value of all parameters and (in the case of functions) a return type",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 22,
+    "title": "Organizing Attributes and Operations ",
+    "body": "\nWhen drawing a class, you don't have to show every attribute and every operation at once. \nchoose to show only some  or none of a class's attributes and operations. \nIndicate that there are more attributes or properties than shown by ending each list with an ellipsis (\"...\").",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 23,
+    "title": "Responsibilities ",
+    "body": "\nA responsibility is a contract or an obligation of a class.\n When you create a class, you are making a statement that all objects of that class have the same kind of state and the same kind of behavior. \nAt a more abstract level, these corresponding attributes and operations are just the features by which the class's responsibilities are carried out. \nA Wall class is responsible for knowing about height, width, and thickness\nFraudAgent class, as you might find in a credit \n   card application, is responsible for processing \n   orders and determining if they are legitimate, \n   suspect, or fraudulent \nTemperatureSensor class is responsible for measuring temperature and raising an alarm if the temperature reaches a certain point.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 24,
+    "title": "Modeling the Vocabulary of a System ",
+    "body": "\nTo model the vocabulary of a system, \nIdentify those things that users or \n   implementers use to describe the \n   problem or solution. \nUse , use case-based \n    analysis to help find these abstractions. \nFor each abstraction, identify a set \n   of responsibilities. \nMake sure that each class is crisply \n   defined and that there is a good balance \n   of responsibilities among all your classes. \nProvide the attributes and operations that are needed to carry out these responsibilities for each class.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 25,
+    "title": "Modeling the Distribution of Responsibilities in a System ",
+    "body": "\nTo model the distribution of responsibilities in a system, \nIdentify a set of classes that work together closely to carry out some behavior. \nIdentify a set of responsibilities for each of these classes. \nSplit classes that have too many responsibilities into smaller abstractions, collapse tiny classes that have trivial responsibilities into larger ones, and reallocate responsibilities so that each abstraction reasonably stands on its own. \nRedistribute their responsibilities \n   accordingly so that no class within \n   a collaboration does too much or \n   too little.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 26,
+    "title": "Modelling Primitive Types ",
+    "body": "\nTo model primitive types, such as integers, characters, strings, and even enumeration types, that you might create .\nModel the thing you are abstracting as a class or an enumeration, which is rendered using class notation with the appropriate stereotype. \nIf you need to specify the range of values associated with this type, use constraints.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 27,
+    "title": "",
+    "body": "2.Relationships:In UML, the way that things can connect to one another ,either logically or physically are modelled as relationships.\nIn object-oriented modeling, the three most important relationships are i) dependencies\n   ii) generalizations\n   iii) associations",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 28,
+    "title": "i) Dependencies ",
+    "body": "\nRelationship that states that one thing uses the information and    services of another thing , but not necessarily the reverse.I. Imagine a simple scenario for a library system with two classes:\nLibrary class\nBook class\nDraw the dependency between the classes.\n\nII. Imagine a  School Management System with two key classes: Teacher and Subject. Draw the dependency between the classes.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 29,
+    "title": "Generalizations ",
+    "body": "\nA generalization is a relationship between a general kind of thing and a more specific kind of thing.\nGeneralization is sometimes called an \"is-a-kind-of\" relationship: one thing (class Journal) is-a-kind-of a more general thing (the class Book).",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 30,
+    "title": "",
+    "body": "Using generalization, model the hierarchy of vehicles in an object-oriented system with base class as vehicle",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 31,
+    "title": "Associations ",
+    "body": "\nAn association is a structural relationship that specifies that objects of one thing are connected to objects of another. \nGiven an association connecting two classes, you can relate objects of one class to objects of the other class. \nAn association that connects exactly two classes is called a binary association. \nAlthough it's not as common, you can have associations that connect more than two classes; these are called n-ary associations. \nThere are four adornments that apply to associations : Name, Role, Multiplicity and Aggregation.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 32,
+    "title": "Name",
+    "body": ":\nAn association can have a name, which is used to describe the nature of the relationship.\n\n\n\n\nRole :\nClass has a specific role that it plays in that relationship; a role is just the face the class at the far end of the association presents to the class at the near end of the association. \nExplicitly name the role a class plays in an association.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 33,
+    "title": "Multiplicity",
+    "body": ":\nAn association represents a structural relationship among objects. \nRepresents a range of integers specifying the possible size of the set of related objects. \nThe number of objects must be in the given range-show  a multiplicity of exactly one (1), zero or one (0..1), many (0..*), or one or more (1..*). \nInteger range (such as 2..5). You can even state an exact number (for example, 3, which is equivalent to 3..3).",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 34,
+    "title": "Scenario- An Author writes Books",
+    "body": ".\n- A Book can be written by multiple Authors, especially in the case of co-authorship.\n- An Author can write multiple Books.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 35,
+    "title": "Aggregation",
+    "body": ":\nPlain association between two classes represents  both classes are conceptually at the same level, no one more important than the other. \nModel a \"whole/part\" relationship, in which one class represents a larger thing (the \"whole\"), which consists of smaller things (the \"parts\"). \nThis kind of relationship is called aggregation, which represents a \"has-a\" relationship.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 36,
+    "title": "",
+    "body": "Common Modeling Techniques",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 37,
+    "title": "Modelling Simple Dependencies ",
+    "body": "\nThe most common kind of dependency relationship is the connection between a class that only uses another class as a parameter to an operation. \nTo model this using relationship, \nCreate a dependency pointing from the class with the operation to the class used as a parameter in the operation.<<friend>> -It is a type of dependency. This relationship essentially allows a class to access private members of another class.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 38,
+    "title": "Modelling Single Inheritance ",
+    "body": "\nTo model inheritance relationships, \nGiven a set of classes, look for responsibilities, attributes, and operations that are common to two or more classes. \nElevate these common responsibilities, attributes, and operations to a more general class. If necessary, create a new class to which you can assign these elements (but be careful about introducing too many levels). \nSpecify that the more-specific classes inherit from the more-general class by placing a generalization relationship that is drawn from each specialized class to its more-general parent.",
+    "notes": "An abstract class is a class that has no direct instances but whose descendant classes have direct instances\nAn abstract operation defines the signature of an operation for which each concrete subclass must provide its own implementation.",
+    "has_image": true
+  },
+  {
+    "slide_id": 39,
+    "title": "",
+    "body": "Information system for a schoolThere are  classes named Student, Course, Instructor, School and Department \n1)There's an association between Student and Course, specifying that students attend courses. Furthermore, every student may attend any number of courses and every course may have any number of students.\n2) There is an association between Course and Instructor, specifying that instructors teach courses. For every course there is at least one instructor and every instructor may teach zero or more courses.\n3) The relationships between School and the classes Student and Department are a bit different. Here you have aggregation relationships. A school has zero or more students, each student may be a registered member of one or more schools, a school has one or more departments, each department belongs to exactly one school.\n4) There are two associations between Department and Instructor. \n-One of these associations specifies that every instructor is assigned to one or more departments and that each department has one or more instructors.\n- The other association specifies that for every department, there is exactly one instructor who is the department chair. The way this model is specified, an instructor can be the chair of no more than one department and some instructors are not chairs of any department.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 40,
+    "title": "",
+    "body": "",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 41,
+    "title": "Modelling Structural Relationships ",
+    "body": "\nTo model structural relationships, \nFor each pair of classes, if you need to navigate from objects of one to objects of another, specify an association between the two. This is a data-driven view of associations. \nFor each pair of classes, if objects of one class need to interact with objects of the other class other than as local variables in a procedure or parameters to an operation, specify an association between the two. This is more of a behavior-driven view of associations. \nFor each of these associations, specify a multiplicity (especially when the multiplicity is not *, which is the default), as well as role names (especially if they help to explain the model). \nIf one of the classes in an association is structurally or organizationally a whole compared with the classes at the other end that look like parts, mark this as an aggregation by adorning the association at the end near the whole with a diamond.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 42,
+    "title": "",
+    "body": "Common MechanismsThe UML is made simpler by the presence of four common mechanisms that apply consistently throughout the language: \nspecifications, \nadornments, \ncommon divisions, and \nextensibility mechanisms.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 43,
+    "title": "AdornmentNotes are the most important kind of adornment",
+    "body": ".\nA note is a graphical symbol for rendering constraints or comments attached to an element or a collection of elements. \nUse notes to attach information to a model, such as requirements, observations, reviews, and explanations.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 44,
+    "title": "",
+    "body": "NotesA note that renders a comment has no semantic impact, meaning that its contents do not alter the meaning of the model to which it is attached. \nThis is why notes are used to specify things like requirements, observations, reviews, and explanations, in addition to rendering constraints.\nNotes may be attached to more than one element by using dependencies\nA note may contain any combination of text or graphics.\nYou can put a live URL inside a note, or even link to or embed another document",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 45,
+    "title": "",
+    "body": "Other AdornmentsAdornments are textual or graphical items that are added to an element's basic notation and are used to visualize details from the element's specification. \nFor example, the basic notation for an association is a line, but this may be adorned with such details as the role and multiplicity of each end. \nIn using the UML, the general rule to follow is this: Start with the basic notation for each element and then add other adornments only as they are necessary to convey specific information that is important to your model.\nMost adornments are rendered by placing text near the element of interest or by adding a graphic symbol to the basic notation",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 46,
+    "title": "",
+    "body": "In the case of classes, components, and nodes, you can add an extra compartment below the usual compartments to provide more details.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 47,
+    "title": "",
+    "body": "Extensibility mechanismThe UML's extensibility mechanisms permit you to extend the language in controlled ways. \nThese mechanisms include stereotypes, tagged values, and constraints. \nA stereotype extends the vocabulary of the UML, to create new kinds of building blocks that are derived from existing ones but that are specific to your problem. \nA tagged value extends the properties of a UML building block, to create new information in that element's specification. \nA constraint extends the semantics of a UML building block, to add new rules or modify existing ones.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 48,
+    "title": "",
+    "body": "StereotypesIntroduce new things that speak the vocabulary of your domain and look like primitive building blocks.\nmetatype, equivalent of a new class in the UML's metamodel.\neach stereotype may provide its own set of tagged values, semantics (each stereotype may provide its own constraints), and notation (each stereotype may provide its own icon). Stereotype is rendered as a name enclosed by guillemets (<< metaclass>>).",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 49,
+    "title": "",
+    "body": "For example, if you are modeling a network, you might want to have symbols for routers and hubs; you can use stereotyped nodes to make these things appear as primitive building blocks.",
+    "notes": "The constraint is specifying that the data rate for a particular link or connection in the network must be greater than 10 megabits per second (Mbps).",
+    "has_image": true
+  },
+  {
+    "slide_id": 50,
+    "title": "",
+    "body": "Tagged ValuesDefine tags for existing elements of the UML, or define tags that apply to individual stereotypes so that everything with that stereotype has that tagged value. \nA tagged value is not the same as a class attribute. \nTagged value is a metadata because its value applies to the element itself, not its instances.\nTagged  value is rendered as a string enclosed by brackets and placed below the name of other element.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 51,
+    "title": "",
+    "body": "if you are part of your project's release team, responsible for assembling, testing, and then deploying releases, you might want to keep track of the version number and test results for each major subsystem. You can use tagged values to add this information to your models.",
+    "notes": "Package",
+    "has_image": true
+  },
+  {
+    "slide_id": 52,
+    "title": "",
+    "body": "For example, to specify the number of processors installed on each kind of node in a deployment diagram, or you might want to require that every component be stereotyped as a library if it is intended to be deployed on a client or a server.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 53,
+    "title": "",
+    "body": "ConstraintsWith constraints we can add new rules or modify existing ones.\nA constraint specifies conditions that must be held true for the model to be well-formed.\nOCL- Object Constraint Language",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 54,
+    "title": "",
+    "body": "Standard ElementsThe UML defines a number of standard stereotypes for classifiers, components, relationships, and other modeling elements. \nThere is one standard stereotype, mainly of interest to tool builders, that lets you model stereotypes themselves.\nstereotype - Specifies that the classifier is a stereotype that may be applied to other elements\nThe UML also specifies one standard tagged value that applies to all modeling elements.\ndocumentation - Specifies a comment, description, or explanation of the element to which it is attached",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 55,
+    "title": "",
+    "body": "Common Modeling Techniques",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 56,
+    "title": "Modelling Comments ",
+    "body": "\nTo model a comment, \nShow a more explicit relationship by connecting a note to its elements using a dependency relationship. \nExpose your comments in your diagrams only in so far as you need to communicate that information in that context. \nIf your comment is lengthy or involves something richer than plain text, consider putting your comment in an external document and linking or embedding that document in a note attached to your model. \nAs your model evolves, keep those comments that record significant decisions that cannot be inferred from the model itself, and unless they are of historic interest discard the others.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 57,
+    "title": "Modelling Comments (Cont",
+    "body": ".)",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 58,
+    "title": "",
+    "body": "Modeling New Building BlocksThe UML's building blocks - classes, interfaces, collaborations, components, nodes, associations, and so on - are generic enough to address most of the things you'll want to model.\nIf you want to extend your modeling vocabulary or give distinctive visual cues to certain kinds of abstractions that often appear in your domain, use stereotypes.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 59,
+    "title": "To model new building blocks,",
+    "body": "\nMake sure there's not already a way to express what you want by using basic UML.\nIf you have a common modeling problem, chances are there's already some standard stereotype that will do what you want.\nIf not, identify the primitive thing in the UML to model (for example, class, interface, component, node, association, and so on) and define a new stereotype for that thing.\nRemember that you can define hierarchies of stereotypes so that you can have general kinds of stereotypes along with their specializations (but as with any hierarchy, use this sparingly).\nSpecify the common properties and semantics that go beyond the basic element being stereotyped by defining a set of tagged values and constraints for the stereotype.\nIf you want these stereotype elements to have a distinctive visual cue, define a new icon for the stereotype.",
+    "notes": "",
+    "has_image": false
+  },
+  {
+    "slide_id": 60,
+    "title": "",
+    "body": "",
+    "notes": "Activity diagram- Flow of coaches and teams through a sporting event",
+    "has_image": true
+  },
+  {
+    "slide_id": 61,
+    "title": "Modelling New Properties ",
+    "body": "\nTo model new properties, \nFirst, make sure there's not already a way to express what you want by using basic UML. \nIf you are convinced there's no other way to express these semantics, define a stereotype and add the new properties to the stereotype.\nThe rules of generalization apply tagged values defined for one kind of stereotype apply to its children.",
+    "notes": "",
+    "has_image": true
+  },
+  {
+    "slide_id": 62,
+    "title": "Modelling New Semantics ",
+    "body": "\nTo model new semantics, \nFirst, make sure there's not already a way to express what you want by using basic UML. \nIf you re convinced there's no other way to express these semantics, write your new semantics in a constraint placed near the element to which it refers. You can show a more explicit relationship by connecting a constraint to its elements using a dependency relationship. \nIf you need to specify your semantics more precisely and formally, write your new semantics using OCL.",
+    "notes": "",
+    "has_image": true
+  }
+]

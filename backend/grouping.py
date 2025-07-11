@@ -1,10 +1,15 @@
+import time
+start_total = time.time()
 import json
-from sentence_transformers import SentenceTransformer
 from sklearn.cluster import AgglomerativeClustering
-import sys
+# from sentence_transformers import SentenceTransformer
 
 
-def cluster(slides_dict_list,n_cluster=None):
+
+
+print("Imports done in:", time.time() - start_total)
+
+def cluster(slides_dict_list,model,n_cluster=None, threshold = 0.4):
 
     valid_slide_index = []
     window_size = 1  # set to 0 to disable, 1 = include prev/next
@@ -29,31 +34,40 @@ def cluster(slides_dict_list,n_cluster=None):
         windowed_texts.append("\n---\n".join(window))  # join with separator
 
     # Embed
-    model = SentenceTransformer("all-MiniLM-L6-v2")
+    start_time = time.time()
     embeddings = model.encode(windowed_texts)
-
+    print("embeddings time: " + str(time.time()- start_time)
+)
     # Cluster data
-    clustering = AgglomerativeClustering(
-        n_clusters=n_cluster, distance_threshold=0.4, metric="cosine", linkage="average"
+    cluster_time = time.time()
+    if not n_cluster:
+        clustering = AgglomerativeClustering(
+        n_clusters=None, distance_threshold=threshold, metric="cosine", linkage="average"
     )
+    else :
+       clustering = AgglomerativeClustering(
+        n_clusters=n_cluster, distance_threshold=None, metric="cosine", linkage="average"
+    )
+
     labels = clustering.fit_predict(embeddings)
+    print("clustering time: " + str(time.time() - cluster_time))
 
     for idx, cluster_id in zip(valid_slide_index, labels):
         slides_dict_list[idx]["cluster_id"] = int(cluster_id)
 
-    # Group slides by cluster_id
-    grouped_slides = {}
-    for slide in slides_dict_list:
-        cluster_id = slide.get("cluster_id")
-        if cluster_id not in grouped_slides:
-            grouped_slides[cluster_id] = []
-        grouped_slides[cluster_id].append(slide)
+    # # Group slides by cluster_id
+    # grouped_slides = {}
+    # for slide in slides_dict_list:
+    #     cluster_id = slide.get("cluster_id")
+    #     if cluster_id not in grouped_slides:
+    #         grouped_slides[cluster_id] = []
+    #     grouped_slides[cluster_id].append(slide)
 
-    # Print grouped slides
-    for cluster_id, slides in sorted(grouped_slides.items(), key=lambda x: (x[0] is None, x[0])):
-        print(f"Cluster {cluster_id}:")
-        for slide in sorted(slides, key=lambda x: x.get("slide_id", 0)):
-            print(f"  Slide ID: {slide.get('slide_id')}, Title: {slide.get('title')}")
+    # # Print grouped slides
+    # for cluster_id, slides in sorted(grouped_slides.items(), key=lambda x: (x[0] is None, x[0])):
+    #     print(f"Cluster {cluster_id}:")
+    #     for slide in sorted(slides, key=lambda x: x.get("slide_id", 0)):
+    #         print(f"  Slide ID: {slide.get('slide_id')}, Title: {slide.get('title')}")
     return slides_dict_list
 
 def save_cluster_json(data,output_json):
@@ -62,16 +76,13 @@ def save_cluster_json(data,output_json):
 
 
 # starting
-if __name__ == "__main__":
-    # if len(sys.argv) != 3:
-    #     print("usage: python grouping.py input.json clustered.json")
-    #     sys.exit(1)
+# if __name__ == "__main__":
 
-    # extract data
-    # input_json = sys.argv[1]
-    input_json = "temp.json"
-    with open(input_json, "r") as f:
-        slides_dict_list = json.load(f)
+    # model = SentenceTransformer("all-MiniLM-L6-v2")
+    # input_json = "temp.json"
+    # output_json = "clus.json"
+    # with open(input_json, "r") as f:
+    #     slides_dict_list = json.load(f)
 
-
-    cluster_data = cluster(slides_dict_list)
+    # cluster_data = cluster(slides_dict_list,model)
+    # save_cluster_json(cluster_data,output_json)

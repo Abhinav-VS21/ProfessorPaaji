@@ -1,0 +1,34 @@
+# Environment variables
+backend/.env
+backend/config.json
+
+# Python backend
+backend/__pycache__/
+backend/*.pyc
+backend/venv/
+backend/.pytest_cache/
+
+# React frontend
+slide-cluster-frontend/node_modules/
+slide-cluster-frontend/build/
+slide-cluster-frontend/.env
+slide-cluster-frontend/.env.local
+
+# Model files (if large)
+backend/models/
+*.bin
+*.pt
+*.pkl
+
+# Data files (if sensitive)
+backend/uploads/
+*.pptx
+*.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

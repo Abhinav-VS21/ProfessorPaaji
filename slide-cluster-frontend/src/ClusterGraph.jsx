@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import ForceGraph2D from "react-force-graph-2d";
 import ClusterExplanationPanel from "./ClusterExplanationPanel";
-const backend_ip = "34.131.167.6";
+const backend_ip = "professorpaajiapi.duckdns.org";
 
 export default function ClusterGraph({ GraphData }) {
   const fgRef = useRef();

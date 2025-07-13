@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-const backend_ip = "34.131.167.6";
+const backend_ip = "professorpaajiapi.duckdns.org";
 
 export default function Input({ onFileUpload, graphData, onResetToDefault }) {
   const [selectedFile, setSelectedFile] = useState(null);

@@ -23,7 +23,7 @@ export default function Input({ onFileUpload, graphData, onResetToDefault }) {
 
     try {
       const response = await fetch(
-        "http://" + backend_ip + ":8000/api/cluster",
+        "https://" + backend_ip + ":8000/api/cluster",
         {
           method: "POST",
           body: formData,

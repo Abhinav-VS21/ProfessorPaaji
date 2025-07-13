@@ -68,7 +68,7 @@ export default function ClusterGraph({ GraphData }) {
       formData.append("cluster_data", clusterContent);
 
       const response = await fetch(
-        "http://localhost:8000/api/explain-cluster",
+        "http://34.131.148.200:8000/api/explain-cluster",
         {
           method: "POST",
           body: formData,

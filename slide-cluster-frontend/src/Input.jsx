@@ -21,7 +21,7 @@ export default function Input({ onFileUpload, graphData, onResetToDefault }) {
     formData.append("threshold", thresholdValue);
 
     try {
-      const response = await fetch("http://localhost:8000/api/cluster", {
+      const response = await fetch("http://34.131.148.200:8000/api/cluster", {
         method: "POST",
         body: formData,
       });

@@ -13,7 +13,7 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 app = FastAPI()
 
 origins = [
-    "https://professor-paaji-um1s.vercel.app/",
+    "https://https://professor-paaji.vercel.app/",
     "http://localhost:5173",
 ]
 

@@ -14,7 +14,7 @@ app = FastAPI()
 
 origins = [
     "https://professor-paaji-um1s.vercel.app/",
-    "http://localhost:3000",  # optional, for local dev
+    "http://localhost:5173",
 ]
 
 # Enable CORS for local frontend testing (you can limit this in production)

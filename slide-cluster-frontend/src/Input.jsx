@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+const backend_ip = "localhost";
 
 export default function Input({ onFileUpload, graphData, onResetToDefault }) {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -21,10 +22,13 @@ export default function Input({ onFileUpload, graphData, onResetToDefault }) {
     formData.append("threshold", thresholdValue);
 
     try {
-      const response = await fetch("http://34.131.148.200:8000/api/cluster", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "http://" + backend_ip + ":8000/api/cluster",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();

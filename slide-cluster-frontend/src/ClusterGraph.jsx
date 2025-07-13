@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import ForceGraph2D from "react-force-graph-2d";
 import ClusterExplanationPanel from "./ClusterExplanationPanel";
+const backend_ip = "localhost";
 
 export default function ClusterGraph({ GraphData }) {
   const fgRef = useRef();
@@ -68,7 +69,7 @@ export default function ClusterGraph({ GraphData }) {
       formData.append("cluster_data", clusterContent);
 
       const response = await fetch(
-        "http://34.131.148.200:8000/api/explain-cluster",
+        "http://" + backend_ip + ":8000/api/explain-cluster",
         {
           method: "POST",
           body: formData,

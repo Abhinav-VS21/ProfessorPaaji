@@ -20,8 +20,8 @@ origins = [
 # Enable CORS for local frontend testing (you can limit this in production)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # Change to your frontend domain in production
-    allow_credentials=True,
+    allow_origins=["*"],  # Change to your frontend domain in production
+    allow_credentials=false,
     allow_methods=["*"],
     allow_headers=["*"],
 )

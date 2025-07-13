@@ -22,13 +22,10 @@ export default function Input({ onFileUpload, graphData, onResetToDefault }) {
     formData.append("threshold", thresholdValue);
 
     try {
-      const response = await fetch(
-        "https://" + backend_ip + ":8000/api/cluster",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch("https://" + backend_ip + "/api/cluster", {
+        method: "POST",
+        body: formData,
+      });
 
       if (response.ok) {
         const data = await response.json();

@@ -1,7 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import ForceGraph2D from "react-force-graph-2d";
 import ClusterExplanationPanel from "./ClusterExplanationPanel";
-const backend_ip = "professorpaajiapi.duckdns.org";
+import { BACKEND_URL } from "./constants.js";
+
+console.log("BACKEND_URL:", BACKEND_URL);
+console.log("Environment:", import.meta.env.MODE);
+console.log("All env vars:", import.meta.env);
 
 export default function ClusterGraph({ GraphData }) {
   const fgRef = useRef();
@@ -68,13 +72,10 @@ export default function ClusterGraph({ GraphData }) {
       const formData = new FormData();
       formData.append("cluster_data", clusterContent);
 
-      const response = await fetch(
-        "https://" + backend_ip + "/api/explain-cluster",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch(`${BACKEND_URL}/api/explain-cluster`, {
+        method: "POST",
+        body: formData,
+      });
 
       if (response.ok) {
         const data = await response.json();

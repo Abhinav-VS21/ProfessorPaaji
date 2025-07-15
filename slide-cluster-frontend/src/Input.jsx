@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-const backend_ip = "professorpaajiapi.duckdns.org";
+import { BACKEND_URL } from "./constants.js";
+console.log("BACKEND_URL:", BACKEND_URL);
+console.log("Environment:", import.meta.env.MODE);
+console.log("All env vars:", import.meta.env);
 
 export default function Input({ onFileUpload, graphData, onResetToDefault }) {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -22,7 +25,7 @@ export default function Input({ onFileUpload, graphData, onResetToDefault }) {
     formData.append("threshold", thresholdValue);
 
     try {
-      const response = await fetch("https://" + backend_ip + "/api/cluster", {
+      const response = await fetch(`${BACKEND_URL}/api/cluster`, {
         method: "POST",
         body: formData,
       });

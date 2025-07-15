@@ -1,4 +1,5 @@
 
+from sympy import false
 from extractText import extract_text_from_pptx
 from grouping import cluster
 from gemini import get_gemini_response
@@ -12,15 +13,11 @@ from fastapi import Request
 model = SentenceTransformer("all-MiniLM-L6-v2")
 app = FastAPI()
 
-origins = [
-    "https://professor-paaji.vercel.app/",
-    "http://localhost:5173",
-]
 
 # Enable CORS for local frontend testing (you can limit this in production)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # Change to your frontend domain in production
+    allow_origins=["*"],  # Change to your frontend domain in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

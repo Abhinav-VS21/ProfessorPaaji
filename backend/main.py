@@ -1,5 +1,4 @@
 
-from sympy import false
 from extractText import extract_text_from_pptx
 from grouping import cluster
 from gemini import get_gemini_response

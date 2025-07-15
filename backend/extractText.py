@@ -3,7 +3,6 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE, PP_PLACEHOLDER
 import json
 import sys
 
-
 def extract_text_from_pptx(pptx_path):
     prs = Presentation(pptx_path)
     slide_data = []
